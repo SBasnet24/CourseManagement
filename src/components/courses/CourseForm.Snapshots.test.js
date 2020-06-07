@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
 import CourseForm from "./CourseForm";
 import renderer from "react-test-renderer";
 import { courses, authors } from "../../../tools/mockData";
 
-it("sets submit button label 'Saving...' when saving is true ", () => {
+it("sets submit button label 'Saving...' when saving is true", () => {
   const tree = renderer.create(
     <CourseForm
       course={courses[0]}
@@ -14,6 +13,7 @@ it("sets submit button label 'Saving...' when saving is true ", () => {
       saving
     />
   );
+
   expect(tree).toMatchSnapshot();
 });
 
